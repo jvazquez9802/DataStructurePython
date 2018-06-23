@@ -2,7 +2,7 @@
 Comentarios en bloque
 
 """
-class LikedList:
+class LinkedList:
     def __init__(self):
         self.first = None
 
@@ -17,3 +17,11 @@ class LikedList:
             t = t.sig
 
         t.sig = node
+    def printList(self):
+        s = ""
+        t = self.first
+        s+= str(t.value) + ", "
+        while t.sig != None:
+            t = t.sig
+            s+= str(t.value) + ", "
+        return s
